@@ -74,7 +74,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">Social Traction · Last updated August 9, 2026</p>
+  <p class="updated">Social Traction · Last updated August 12, 2026</p>
 
   <p>
     This Privacy Policy explains what information Social Traction ("the app", "we", "us")
@@ -85,7 +85,10 @@
 
   <h2>Information we collect</h2>
 
-  <p><strong>Account information.</strong> When you create a Social Traction account, we
+  <p><strong>Account information (optional).</strong> You can use Social Traction's core
+  features — connecting a platform, viewing your own performance data, AI suggestions,
+  and trends — without creating an account. If you choose to create one anyway (to back up
+  your connected channels and history so you can restore them on a new device), we
   collect:</p>
   <ul>
     <li>Your email address</li>
@@ -95,20 +98,21 @@
   </ul>
 
   <p><strong>Connected social media accounts.</strong> If you choose to connect a
-  supported platform (currently Instagram, with more planned), you'll be asked to
-  authorize access via that platform's own login screen. Once connected, we access and
-  store:</p>
+  supported platform (currently YouTube, with more planned), you'll be asked to authorize
+  access via that platform's own login or public channel lookup. Once connected, we access
+  and store:</p>
   <ul>
-    <li>Your public profile info on that platform (username, profile picture, follower
-      count, account type)</li>
-    <li>Your own posts/media (captions, media links, thumbnails, publish dates)</li>
+    <li>Your public profile info on that platform (username/handle, profile picture,
+      subscriber/follower count)</li>
+    <li>Your own posts/videos (titles, media links, thumbnails, publish dates)</li>
     <li>Performance metrics for your own posts (views, likes, comments, shares, reach)</li>
   </ul>
   <p>
     This data belongs to the account you connect — we only ever request it with your
-    explicit authorization through that platform's own consent screen, and only to show
-    it back to you inside Social Traction. The access token used to fetch it is stored in
-    a separate, locked-down part of our database that the app itself cannot read directly.
+    explicit authorization (or, for platforms using public data only, from the channel
+    handle you provide), and only to show it back to you inside Social Traction. Where a
+    platform's connection uses an access token, that token is stored in a separate,
+    locked-down part of our database that the app itself cannot read directly.
   </p>
 
   <p><strong>Information stored on your device.</strong> Social Traction caches your
@@ -116,10 +120,20 @@
   and stores your sign-in session in the iOS Keychain, which is encrypted by iOS itself.</p>
 
   <h2>How we use your information</h2>
-  <p>We use the information above solely to operate Social Traction: to authenticate you,
-  to show you your own connected accounts' performance in the app's dashboard, analysis,
-  suggestions, and trends screens, and to keep your session signed in across launches. We
+  <p>We use the information above solely to operate Social Traction: to show you your own
+  connected accounts' performance in the app's dashboard, analysis, suggestions, and trends
+  screens, and, if you create an account, to keep your session signed in across launches. We
   do not use your data for advertising, and we do not sell your data to anyone.</p>
+
+  <p><strong>AI-generated suggestions.</strong> If you turn on AI Suggestions (off by
+  default — the app asks for your explicit permission before this is ever used, and you can
+  turn it off anytime in Settings), each connected post's title and its view, like, and
+  comment counts are sent to <strong>Google's Gemini API</strong> to generate a suggestion
+  for that post. Only that post's title and those counts are sent — never your email, name,
+  or any other account details. Google processes this data solely to generate the response
+  returned to the app; see
+  <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google's
+  Gemini API Additional Terms of Service</a> for how Google itself handles it.</p>
 
   <h2>How we share your information</h2>
   <p>We don't share your personal information with third parties for their own purposes.
@@ -128,9 +142,12 @@
     <li><strong>Supabase</strong>, our backend infrastructure provider — hosts our
       database and handles authentication on our behalf, under its own security and
       privacy commitments.</li>
-    <li><strong>The platform(s) you connect</strong> (e.g. Meta/Instagram) — we call their
-      official APIs, using your own authorization, solely to fetch your own account's
-      data.</li>
+    <li><strong>The platform(s) you connect</strong> (e.g. YouTube/Google, or Meta/Instagram
+      once available) — we call their official APIs, using your own authorization or the
+      channel you specify, solely to fetch that account's data.</li>
+    <li><strong>Google's Gemini API</strong> — only if you've explicitly turned on AI
+      Suggestions, and only the specific post title and metrics described above, never your
+      account details.</li>
   </ul>
 
   <h2>Data security</h2>
